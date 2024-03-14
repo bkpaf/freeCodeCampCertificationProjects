@@ -78,9 +78,9 @@ convertBtn.addEventListener("click", () => {
   console.log(`Roman Numeral is ${tempRomanNumeral}`);
   output.innerText = tempRomanNumeral;
 });
-/* *********************
+
 const decimalToRoman = (input) => {
-//TODO basecase will be when value is equal to the object value
+//TODO figure out why values that exist in the romanDigits array don't convert
   
   if (romanDigits.some(e => e.value === input)){
       let existingDigitIndex = romanDigits.findIndex(x => x.value === input)
@@ -97,8 +97,9 @@ const decimalToRoman = (input) => {
     return decimalToRoman(input - romanDigits[numeralIndex].value)
     }
 }
-******************* */
 
+/*
+**************************
 const decimalToRoman = (input) => {
   let result = "";
   let remaining = input;
@@ -112,6 +113,8 @@ const decimalToRoman = (input) => {
   tempRomanNumeral = result;
   return result;
 };
+
+******************************
 /*
 
 
