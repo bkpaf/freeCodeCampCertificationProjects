@@ -74,14 +74,15 @@ convertBtn.addEventListener("click", () => {
     return;
   }
   console.log(`here's the input ${input.value}`);
-  decimalToRoman(input.value);
+  const parsedInput = parseInt(input.value, 10);
+  decimalToRoman(parsedInput);
   console.log(`Roman Numeral is ${tempRomanNumeral}`);
   output.innerText = tempRomanNumeral;
 });
 
 const decimalToRoman = (input) => {
 //TODO figure out why values that exist in the romanDigits array don't convert
-  
+  console.log(typeof input);
   if (romanDigits.some(e => e.value === input)){
       let existingDigitIndex = romanDigits.findIndex(x => x.value === input)
       console.log(`existingDigitIndex is ${existingDigitIndex}`)
